@@ -1,0 +1,127 @@
+* {
+  background: linear-gradient(
+    90deg,
+    rgba(54, 54, 54, 1) 0%,
+    rgba(35, 35, 35, 1) 50%,
+    rgba(23, 23, 23, 1) 100%
+  );
+}
+
+form {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "image content";
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload {
+  grid-area: upload;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-self: center;
+}
+
+.uploadButton {
+  padding: 13px 25px;
+  border: 1px solid rgb(231, 231, 231, 0.87);
+  background: rgba(231, 231, 231, 0.87);
+  color: rgb(39, 39, 39);
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: color 200ms, border 200ms;
+
+  &:hover {
+    color: rgb(126, 16, 141);
+    border: 1px solid rgb(126, 16, 141);
+    cursor: pointer;
+  }
+}
+
+.fileName {
+  margin-left: 20px;
+  background: transparent;
+}
+
+.other {
+  grid-area: other;
+}
+
+.clips {
+  grid-area: image;
+  background: transparent;
+  width: 75%;
+  margin-left: 50px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 150px;
+}
+
+.content {
+  background: transparent;
+
+  grid-area: content;
+  color: white;
+  font-family: "Shree Devanagari 714";
+
+  display: grid;
+  grid-template-rows: 400px 120px 120px;
+  grid-template-areas: "text" "fileChoice" "upload";
+}
+
+.text {
+  background: transparent;
+  grid-area: text;
+}
+
+.header {
+  background: transparent;
+  margin-top: 150px;
+  color: rgb(240, 240, 240);
+
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.description {
+  background: transparent;
+  margin-top: 25px;
+  margin-right: 130px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.actions {
+  grid-area: upload;
+  background: transparent;
+}
+
+.convertButton {
+  grid-area: upload;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 50px;
+  margin-right: 50px;
+  margin-top: 80px;
+  align-self: start;
+
+  background: transparent;
+  border: none;
+  background: rgb(156, 38, 172);
+  border-radius: 5px;
+  color: rgb(235, 235, 235);
+  font-size: 18px;
+
+  transition: background 200ms;
+
+  &:hover {
+    background: rgb(166, 46, 182);
+    cursor: pointer;
+  }
+}
